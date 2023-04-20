@@ -1,7 +1,7 @@
 <?php
 function SuperGet(){
 
-    $mysqli = new mysqli('db', 'root', 'helloworld', 'iweb');
+    $mysqli = new mysqli('db', 'root', 'helloworld', 'web');
 
     if (mysqli_connect_errno()){
         printf('Can not connect to mysql sever.Error code: %s', mysqli_connect_errno());
@@ -11,7 +11,7 @@ function SuperGet(){
 $i =0;
 $j = 0;
 
-    if ($result = $mysqli->query('SELECT * from ad ORDER BY created DESC')) {
+    if ($result = $mysqli->query('SELECT * from ad')) {
         while ($row = $result->fetch_assoc()) {
             $response[$i][$j] = $row['category'];
             $j = $j + 1;

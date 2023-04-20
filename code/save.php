@@ -19,7 +19,7 @@ $em = $_POST['email'];
 
 
 
-$mysqli = new mysqli('db', 'root', 'helloworld', 'iweb');
+$mysqli = new mysqli('db', 'root', 'helloworld', 'web');
 
 if (mysqli_connect_errno()) {
     printf('Can not connect to mysql sever.Error code: %s', mysqli_connect_errno());
